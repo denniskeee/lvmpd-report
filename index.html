@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Las Venturas Metropolitan Police Department</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .form-wrapper {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+    font-style: italic;
+      color: #aaa7a7;
+      font-size: 22px;
+      margin-bottom: 20px;
+        text-shadow:
+    -0.5px 0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px  0.5px 0 #000,
+     0.5px  0.5px 0 #000; 
+    }
+
+    form {
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .accordion {
+      margin-top: 10px;
+    }
+
+    .accordion-section {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f8f8f8;
+    }
+
+    .accordion-header {
+      background-color: #e2e2e2;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .accordion-content label {
+      font-weight: normal;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: #0078D7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005ea6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-wrapper">
+  <h1>Las Venturas Metropolitan Police Department</h1>
+  <p class="subtitle">Jelentés benyújtása a letartóztatásról</p>
+
+<form action="#" method="post" enctype="multipart/form-data">
+  <label for="name">Név (Kötelező):</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="badge">Jelvényszám (Kötelező):</label>
+  <input type="text" id="badge" name="badge" required>
+
+  <label for="rank">Beosztás (Kötelező):</label>
+  <input type="text" id="rank" name="rank" required>
+
+  <label for="suspect">Elkapott neve (Kötelező):</label>
+  <input type="text" id="suspect" name="suspect" required>
+
+  <label>Bűncselekmények (Kötelező):</label>
+  <div class="accordion">
+
+    <div class="accordion-section">
+      <div class="accordion-header">I. § - Ember ellen elkövetett bűncselekmények</div>
+      <div class="accordion-content">
+        <label><input type="checkbox" name="crime[]" value="1(01)	Emberölés – 120 perc / 200.000$"> 1(01)	Emberölés – 120 perc / 200.000$</label>
+        <label><input type="checkbox" name="crime[]" value="1(01.1)	Szándékos emberölés – 180 perc / 200.000$"> 1(01.1)	Szándékos emberölés – 180 perc / 200.000$</label>
+        <label><input type="checkbox" name="crime[]" value="1(01.2)	Vétlen emberölés – 150 perc / 150.000$"> 1(01.2) Vétlen emberölés – 150 perc / 150.000$</label>
+        <label><input type="checkbox" name="crime[]" value="1(01,PO) Hivatali személy – 180 perc / 300.000$"> 1(01,PO) Hivatali személy – 180 perc / 300.000$</label>
+        <label><input type="checkbox" name="crime[]" value="1(02) Emberölési kísérlet – 120 perc / 120.000$"> 1(02) Emberölési kísérlet – 120 perc / 120.000$</label>
+        <label><input type="checkbox" name="crime[]" value="1(02,PO) Hivatali személy – 180 perc / 200.000$"> 1(02,PO) Hivatali személy – 180 perc / 200.000$</label>
+        <label><input type="checkbox" name="crime[]" value="1(03) Testi sértés (Óvadék lehetősége) – 0 perc / 0$"> 1(03) Testi sértés (Óvadék lehetősége) – 0 perc / 0$</label>
+        <label><input type="checkbox" name="crime[]" value="1(03.1)	Könnyű testi sértés (Óvadék lehetősége) – 45 perc / 45.000$"> 1(03.1)	Könnyű testi sértés (Óvadék lehetősége) – 45 perc / 45.000$"</label>
+        <label><input type="checkbox" name="crime[]" value="1(03.2)	Súlyos testi sértés – 75 perc / 10.000$"> 1(03.2)	Súlyos testi sértés – 75 perc / 10.000$"</label>
+        <label><input type="checkbox" name="crime[]" value="1(04) Emberrablás – 120 perc / 120.000$"> 1(04) Emberrablás – 120 perc / 120.000$</label>
+        <label><input type="checkbox" name="crime[]" value="1(04,PO) Hivatali személy – 150 perc / 170.000$"> 1(04,PO) Hivatali személy – 150 perc / 170.000$</label>
+      </div>
+    </div>
+
+    <div class="accordion-section">
+      <div class="accordion-header">II. § - Tulajdon ellen elkövetett bűncselekmények és jogalap nélküli gazdagodás</div>
+      <div class="accordion-content">
+        <label><input type="checkbox" name="crime[]" value="2(01) Tiltott területre való behatolás (Óvadék lehetősége) – 45 perc / 80.000$"> 2(01) Tiltott területre való behatolás (Óvadék lehetősége) – 45 perc / 80.000$</label>
+        <label><input type="checkbox" name="crime[]" value="2(02) Jármű lopás (Óvadék lehetősége) – 80 perc / 90.000$"> 2(02) Jármű lopás (Óvadék lehetősége) – 80 perc / 90.000$</label>
+        <label><input type="checkbox" name="crime[]" value="2(03) Rablás – 100 perc / 120.000$"> 2(03) Rablás – 100 perc / 120.000$</label>
+        <label><input type="checkbox" name="crime[]" value="2(04) Fegyveres rablás – 120 perc / 150.000$"> 2(04) Fegyveres rablás – 120 perc / 150.000$</label>
+        <label><input type="checkbox" name="crime[]" value="2(05) Hamisítás (Óvadék lehetősége) – 90 perc / 90.000$"> 2(05) Hamisítás (Óvadék lehetősége) – 90 perc / 90.000$</label>
+        <label><input type="checkbox" name="crime[]" value="2(06) Rongálás – 0 perc / 60.000$"> 2(06) Rongálás – 0 perc / 60.000$</label>
+        <label><input type="checkbox" name="crime[]" value="2(06.b)	Rongálás – 30 perc / 60.000$"> 2(06.b)	Rongálás – 30 perc / 60.000$</label>
+        <label><input type="checkbox" name="crime[]" value="2(07) Betörés – 100 perc / 100.000$"> 2(07) Betörés – 100 perc / 100.000$</label>
+        <label><input type="checkbox" name="crime[]" value="2(07.b)	Betörés(Fegyverrel) – 120 perc / 120.000$"> 2(07.b)	Betörés(Fegyverrel) – 120 perc / 120.000$</label>
+      </div>
+    </div>
+
+    <div class="accordion-section">
+      <div class="accordion-header">III. § - Fegyverekkel, kábító és- bódítószerekkel kapcsolatos bűncselekmények</div>
+      <div class="accordion-content">
+        <label><input type="checkbox" name="crime[]" value="Gyilkosság – 60 perc / $10000"> Gyilkosság – 60 perc / $10000</label>
+        <label><input type="checkbox" name="crime[]" value="Fegyveres rablás – 70 perc / $12000"> Fegyveres rablás – 70 perc / $12000</label>
+      </div>
+    </div>
+
+
+    <div class="accordion-section">
+      <div class="accordion-header">IV. § - Közjó ellen elkövetett bűncselekmények</div>
+      <div class="accordion-content">
+        <label><input type="checkbox" name="crime[]" value="Gyilkosság – 60 perc / $10000"> Gyilkosság – 60 perc / $10000</label>
+        <label><input type="checkbox" name="crime[]" value="Fegyveres rablás – 70 perc / $12000"> Fegyveres rablás – 70 perc / $12000</label>
+      </div>
+    </div>
+
+    <div class="accordion-section">
+      <div class="accordion-header">V. § - Közbiztonság és közigazság elleni bűncselekmények</div>
+      <div class="accordion-content">
+        <label><input type="checkbox" name="crime[]" value="Gyilkosság – 60 perc / $10000"> Gyilkosság – 60 perc / $10000</label>
+        <label><input type="checkbox" name="crime[]" value="Fegyveres rablás – 70 perc / $12000"> Fegyveres rablás – 70 perc / $12000</label>
+      </div>
+    </div>
+
+
+        <div class="accordion-section">
+      <div class="accordion-header">VI. § - Közlekedési bűncselekmények</div>
+      <div class="accordion-content">
+        <label><input type="checkbox" name="crime[]" value="Gyilkosság – 60 perc / $10000"> Gyilkosság – 60 perc / $10000</label>
+        <label><input type="checkbox" name="crime[]" value="Fegyveres rablás – 70 perc / $12000"> Fegyveres rablás – 70 perc / $12000</label>
+      </div>
+    </div>
+
+
+            <div class="accordion-section">
+      <div class="accordion-header">VII. § - Szövetségi bűncselekmények</div>
+      <div class="accordion-content">
+        <label><input type="checkbox" name="crime[]" value="Gyilkosság – 60 perc / $10000"> Gyilkosság – 60 perc / $10000</label>
+        <label><input type="checkbox" name="crime[]" value="Fegyveres rablás – 70 perc / $12000"> Fegyveres rablás – 70 perc / $12000</label>
+      </div>
+    </div>
+
+            <div class="accordion-section">
+      <div class="accordion-header">VIII. § - Gazdasági bűncselekmények</div>
+      <div class="accordion-content">
+        <label><input type="checkbox" name="crime[]" value="Gyilkosság – 60 perc / $10000"> Gyilkosság – 60 perc / $10000</label>
+        <label><input type="checkbox" name="crime[]" value="Fegyveres rablás – 70 perc / $12000"> Fegyveres rablás – 70 perc / $12000</label>
+      </div>
+    </div>
+
+
+  </div>
+
+<label for="evidence">Kép vagy log a lecsukásról (Kötelező):</label>
+<small style="display: block; color: #666; margin-top: 5px;">
+  Elég egy kép a lecsukás előtti planelről is vagy maga a log.
+</small>
+<input type="file" id="evidence" name="evidence" accept="image/*,.txt,.log" required>
+</form>
+
+<script>
+  // Accordion működés
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
